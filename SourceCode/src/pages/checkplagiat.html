@@ -1,0 +1,107 @@
+<!-- page plagiat check   --page 2 -->
+<template>
+    <div class="uk-container uk-margin-medium-top">
+        <div class="uk-child-width-expand@s" uk-grid>
+
+            <div class="uk-width-1-4"> 
+              <label class="uk-form-label" style="font-size: 18px;" for="form-horizontal-select">Select the processing algorithm</label>
+            </div>
+
+            <div class="uk-width-1-3">
+              <div class="uk-form-controls" uk-tooltip="title: choose methods plz; pos: bottom-right">
+                <select id="page2-algorithm" class="uk-select" id="form-horizontal-select">
+                    <option value="0" >Empreint Digitale </option>
+                    <option value="1" >Analyse des occurrences des mots  </option>
+                    <option value="1" >Moteur de Recherche  </option>
+                    <option value="1" >Word Embedding  </option>
+                    <option value="1" >Machin learning  </option>
+                    
+                </select>
+              </div>
+            </div>
+            
+        </div>
+
+        <div>
+          <div >
+            <ul class="uk-flex-left uk-margin-medium-top " uk-tab>
+              <li><a id="file_input" href="#" class="txt_qrqbic">Upload a file </a></li>
+                <li class="uk-active"><a id="text_input" class="txt_qrqbic" href="#">write the text </a></li>
+                
+            </ul>
+        </div>
+        </div>
+
+        <div id="textInput" class="uk-child-width-expand@s" uk-grid>
+
+          <div class="uk-child-width-expand@s" dir="rtl" uk-grid>
+            <div id="Plagiat_check_putText" class="uk-form-horizontal uk-margin-small txt_arabic"> 
+                
+              <div class="uk-width-1-1 uk-margin">
+                <label class="uk-form-label" style="font-size: 18px;" for="form-horizontal-select">Text source</label>
+                <textarea id="Plagiat_check_textarea" class="uk-textarea txt_qrqbic" rows="10" placeholder="Please type your text"></textarea>
+              </div>
+
+              <div class="uk-width-1-2">
+                dsvsd
+              <script id="tempalte_page2" type="text/x-handlebars-template"> 
+                    
+                {{#each sentences}}
+                    <span style="color: red"> {{sentance}} </span>
+                   
+                {{/each}} 
+                
+              </script>
+
+              <p id="result-p-1" class="uk-text-center uk-flex-center"> </p>
+              </div>
+            </div>
+
+
+            <div id="loading" class="uk-text-center uk-margin-large-top"></div>
+          </div>
+
+          <div dir="rtl" class="txt_arabic"> 
+            <div class="uk-margin">
+              <label class="uk-form-label" style="font-size: 18px;" for="form-horizontal-select">Text suspecte</label>
+              <textarea id="Plagiat_check_textarea" class="uk-textarea txt_qrqbic" rows="10" placeholder="Please type your text"></textarea>
+            </div>
+            <button id="Plagiat_check_process" class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-top uk-margin-small-bottom">Processing</button>
+          
+            <div>
+              <p style="color: red;">Reformulation paraphrastique</p> 
+              <p style="color: orange;">Duplication (copier/coller)</p>
+              <p style="color: rgb(80, 63, 63);">Substitution par des synonymes</p> 
+              <p style="color: brown;">Assemblage</p> 
+  
+            </div>
+          </div>
+
+          
+          
+
+        </div>
+
+        <div id="fileInput" class="uk-child-width-expand@s" uk-grid>
+          <div> 
+
+            <div class="js-upload uk-placeholder uk-text-center">
+              <span uk-icon="icon: cloud-upload"></span>
+              <span class="uk-text-middle">Upload your file here or</span>  
+              <div uk-form-custom>
+                  <input type="file" multiple>
+                  <span class="uk-link"> press here </span>
+              </div>
+            </div>
+            
+            <progress id="js-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
+            
+            <div class="uk-width-1-1 uk-text-center">
+              <button id="Plagiat_check_process" class="uk-button uk-button-secondary uk-width-1-2 uk-margin-small-top uk-margin-small-bottom">معالجـــــــة</button>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+</template>

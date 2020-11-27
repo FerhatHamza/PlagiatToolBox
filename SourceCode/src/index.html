@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <link rel="stylesheet" href="./uikit/css/uikit.min.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/home.css" />
+
+    <script src="./uikit/js/uikit.min.js"></script>
+    <script src="./uikit/js/uikit-icons.min.js"></script>
+
+    <link rel="import" href="./pages/home.html">
+    <link rel="import" href="./pages/checkplagiat.html">
+    <link rel="import" href="./pages/settingsMethods.html"> 
+    <link rel="import" href="./pages/process.html">
+  
+    
+    <title>Rakib - Arabic Plagiarism Toolbox</title>
+  </head>
+  <body>
+
+   
+
+    <nav class="uk-navbar uk-navbar-container uk-margin uk-margin-small-bottom uk-box-shadow-medium uk-light" style="background-color: #222222;" uk-sticky="bottom: #offset">
+
+      <div class="uk-navbar-left ">
+          <a class="uk-navbar-toggle" href="#offcanvas-usage" uk-toggle>
+              <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+          </a>
+          
+         <div class=""> 
+           <h3 style="margin-bottom: 10px;margin-left: 25px;margin-right: 0;"> 
+            <span class="uk-margin-small-right" uk-icon="star"></span>
+          </h3>  
+        </div>
+
+          <div class="uk-margin uk-margin-medium-right" style="margin-bottom: 0;">
+            <p id="page-title"> Text pretraitment </p>
+          </div>
+
+      </div>
+
+      <div class="uk-navbar-right">
+        <div class="uk-panel uk-padding uk-background-secondary uk-light" style="padding: 0 60px 0 0;">
+          <a class="uk-logo" href="#">Logo</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="view" id="home-page"> </div>
+
+    <div class="view hide" id="Plagiat_check-page"> </div>
+
+    <div class="view hide" id="Settings_Methods-page"></div>
+    
+    <div class="view hide" id="pros-page"></div>
+
+
+
+
+
+     <!-- this is for canvas  -->
+     <div id="offcanvas-usage" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+          <ul class="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical">
+              <li id="home-parent" class="uk-active"> <a href="#" to="home-page">Text analysis</a></li>
+              <li id="Plagiat_check-parent" class=""> <a href="#" to="Plagiat_check-page">Plagiarism detection</a></li>
+              <li id="pros-parent" class=""> <a href="#" to="pros-page">Process</a></li>
+              <li id="Settings_Methods-parent" class=""> <a href="#" to="Settings_Methods-page">Method configuration</a></li>
+              
+              <li class="uk-nav-divider"></li>
+              <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+          </ul>
+
+        </div>
+      </div>
+      
+      <!-- end is for canvas  -->
+
+      <!-- <script type="module" src="./app.js"></script> -->
+      <script type="module" src="./mainApp.js"></script>
+      <script type="module" src="./process.js"></script>
+  </body>
+</html>

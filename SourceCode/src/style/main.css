@@ -1,0 +1,49 @@
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1{
+    color: red;
+    font-size: 34px;
+}
+
+.hide
+{
+    display: none;
+}
+
+.myside{
+    height: 100vh;
+}
+
+.content{
+    max-height: 80vh;
+    height: 100vh;
+    margin-left: 16px;
+    top: 130px;
+    left: 228px;
+    width: 81%;
+}
+.myNavTop{
+    margin-left: 5px; 
+    left: 238px;
+    width: 81%;
+}
+
+
+
+.txt_arab{
+    font-family: 'Amiri', serif;
+}
+.txt_qrqbic{
+    font-size: 18px;
+    font-family: 'Amiri', serif;
+}
+
+
+
+/* ---- ---- ---- ---- page 3 */
+
+.new-method-content{
+    height: 60vh;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "apptoolbox",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Hamza Ferhat && mohamed chanouf",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.2"
+  },
+  "dependencies": {
+    "@editorjs/editorjs": "^2.18.0",
+    "electron-packager": "^14.2.1",
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.1",
+    "python-shell": "^2.0.1"
+  }
+}

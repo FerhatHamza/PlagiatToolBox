@@ -1,0 +1,244 @@
+<!-- page settings methods   --page 3 -->
+<template>
+    <div>
+
+        
+        <div class="uk-container uk-margin-medium-top">
+
+            <div>
+              <ul class="uk-child-width-expand" uk-tab>
+                  <li class="uk-active"><a id="new-method" href="#">New Method</a></li>
+                  <li><a id="compare" href="#">Comparaison of methods</a></li>
+              </ul>
+            </div>
+            
+
+            <div id="new-method-content" class="new-method"> 
+
+              <div>
+                <div class="uk-background-secondary uk-light uk-padding uk-panel " style="
+                color: black;
+                border-radius: 10px;
+                background-color: darkslategrey;
+                ">
+                  <div class="uk-position-relative uk-visible-toggle uk-light new-method-content" tabindex="-1" uk-slideshow>
+
+
+                    <div class="uk-slideshow-items">
+                      
+                      <div>  <!--  this is 1  -->
+                        <div>
+                          <h2 class="uk-heading-bullet">upload code source file</h2> 
+                          
+                        </div>
+
+                          <div class="js-upload uk-placeholder uk-text-center">
+                            <span uk-icon="icon: cloud-upload"></span>
+                            <span class="uk-text-middle">Attach binaries by dropping them here or</span>
+                            <div uk-form-custom>
+                                <input type="file" multiple>
+                                <span class="uk-link">selecting one</span>
+                            </div>
+                          </div>
+                          <span> <span class="uk-margin-small-right" uk-icon="warning"></span> only pyhton script file suported </span>
+                          
+                          <progress id="js-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
+                          
+                      </div>
+
+                       <div> <!--  this is 2  -->
+                          
+                        <div class="uk-flex uk-flex-column">
+
+                          <div>
+                            <h2 class="uk-heading-bullet">Method setting  </h2>  
+                          </div>
+
+                          <div class="">
+                            <p> At what level the method process the texts entered? </p>
+                          </div>
+
+                          <div>
+
+                            <form class="uk-form-horizontal uk-margin-large">
+
+                              <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Your name</label>
+                                <div class="uk-form-controls">
+                                    <input class="uk-input" id="form-horizontal-text" type="text" placeholder="name...">
+                                </div>
+                              </div>
+
+                              <div class="uk-margin">
+                                  <label class="uk-form-label" for="form-horizontal-text">Name the method</label>
+                                  <div class="uk-form-controls">
+                                      <input class="uk-input" id="form-horizontal-text" type="text" placeholder="name...">
+                                  </div>
+                              </div>
+
+                              <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">Text process level</label>
+                                <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                  <label><input class="uk-checkbox" type="checkbox" checked> caracheters </label> 
+                                  <label><input class="uk-checkbox" type="checkbox" checked> mots </label>
+                                  <label><input class="uk-checkbox" type="checkbox"> phrases </label>
+                                </div>
+                              </div>
+
+                              <div class="uk-margin">
+                                <label class="uk-form-label" for="form-horizontal-text">In/Output file type</label>
+                                <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                  <label><input class="uk-checkbox" type="checkbox" checked> .txt </label> 
+                                  <label><input class="uk-checkbox" type="checkbox" checked> .xml </label>
+                                  <label><input class="uk-checkbox" type="checkbox" checked> .json </label>
+                                  <label><input class="uk-checkbox" type="checkbox"> .rtf </label>
+                                </div>
+                              </div>
+
+                              
+                          </form>
+
+                          </div>
+
+                        </div>
+                        
+                      </div>
+
+                      <div> <!--  this is 3  -->
+                          
+                        <div style="height: 40vh;">
+                          <ul uk-accordion>
+                            <li class="uk-open">
+                                <a class="uk-accordion-title" href="#">General statics</a>
+                                <div class="uk-accordion-content uk-margin-medium-left">
+                                    <p> <span class="uk-margin-small-right" uk-icon="user"></span>   Hello <strong>Mr. </strong> Mohamed </p> 
+                                    <p> <span class="uk-margin-small-right" uk-icon="cog"></span>   <strong>Name of your method </strong> method X </p>
+                                  <p>  <span class="uk-margin-small-right" uk-icon="link"></span>  <strong>File uploaded name </strong> py7.py </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">Text processing level</a>
+                                <div class="uk-accordion-content uk-margin-medium-left">
+                                  <ul class="uk-list uk-list-divider">
+                                    <li><p> <span class="uk-margin-small-right" uk-icon="hashtag"> </span> caractere </p></li>
+                                    <li><p> <span class="uk-margin-small-right" uk-icon="hashtag">  </span> mot </p></li>
+                                  </ul>
+
+                                </div>
+                            </li>
+                            <li>
+                                <a class="uk-accordion-title" href="#">In/Output file type</a>
+                                <div class="uk-accordion-content uk-margin-medium-left"> 
+                                  <ul class="uk-list uk-list-divider">
+                                    <li><p> <span class="uk-margin-small-right" uk-icon="file-text"> </span> text file (.txt) </p></li>
+                                    <li><p> <span class="uk-margin-small-right" uk-icon="file">  </span> json file </p></li>
+                                    <li><p> <span class="uk-margin-small-right" uk-icon="file">  </span> xml file </p></li>
+                                  </ul>
+                                 
+                                </div>
+                            </li>
+                        </ul>
+
+                        </div>
+
+
+                        <div class="uk-text-right uk-margin-medium-top uk-margin-small-right">
+                          <button class="uk-button uk-button-danger" >
+                            <span uk-icon="check"></span>
+                            <span>Finish</span>
+                          </button>
+                        </div>
+                      </div>
+                    
+                      
+                    
+                    </div>
+
+                    <div class="uk-position-bottom-center">
+                      <a class="uk-slidenav-large uk-position-small " style="color: white; padding: 0; margin: 0; width:15px; height:30px; margin-left: 25px;" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                      <a class="uk-slidenav-large  uk-position-small" style="color: white; padding: 0; margin: 0; width:15px; height:30px" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                
+                  </div>
+                  
+                   
+                  </div>
+                 
+                </div>
+              </div>
+
+            </div>
+
+
+            <div id="compare-content" class="compare">  <!--  compare 2 methods -page3 -->
+
+
+              <div class="uk-flex uk-flex-column">
+                  <div>
+                    <h2 class="uk-heading-bullet">Comparison Methods for NLP </h2>  
+                  </div>
+                  <div>
+                    <!-- uk-flex-center -->
+                    <div class="uk-flex "> 
+                      
+                        
+
+                        <div class="">
+                          <div uk-form-custom="target: > * > span:first-child">
+                              <select id="page3-method1">
+                                <option value="">Chose method ...</option>
+                                <option value="1">Empreint Digitale</option>
+                                <option value="2">Ensembles Flous</option>
+                                <option value="3">SVD</option>
+                                <option value="4">LSA</option>
+                                <option value="5">Word Embedding</option>
+                                <option value="6">Machine Learning</option>
+                              </select>
+                              <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                  <span></span>
+                                  <span uk-icon="icon: chevron-down"></span>
+                              </button>
+                          </div>
+                        </div>
+                        <div>
+                          <h3 class="uk-margin-large-left uk-margin-large-right"> VS </h3>
+                        </div>
+
+                      <div class="uk-margin-right">
+                        <div class="">
+                          <div uk-form-custom="target: > * > span:first-child">
+                              <select id="page3-method2">
+                                <option value="">Chose method ...</option>
+                                <option value="1">Empreint Digitale</option>
+                                <option value="2">Ensembles Flous</option>
+                                <option value="3">SVD</option>
+                                <option value="4">LSA</option>
+                                <option value="5">Word Embedding</option>
+                                <option value="6">Machine Learning</option>
+                              </select>
+                              <button  class="uk-button uk-button-default" type="button" tabindex="-1">
+                                  <span></span>
+                                  <span uk-icon="icon: chevron-down"></span>
+                              </button>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="uk-margin-large-right uk-width-1-6">
+                        <button id="page3-btn" class="uk-button uk-button-danger uk-width-1-1">Go </button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div id="page3-result">
+                    here reusult
+                  </div>
+              </div>
+              
+            </div>
+
+
+          </div>
+
+    </div>
+</template>

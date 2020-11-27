@@ -1,0 +1,36 @@
+.en-title{
+    margin-bottom: 7px; 
+    margin-top: 0;
+    color: grey;
+}
+.ar-title{
+    margin-top: 0;
+    color: grey;
+}
+
+.textarea-1{
+    font-family: 'Amiri', serif;
+}
+
+.text-arabic{
+    font-size: 18px;
+    font-family: 'Amiri', serif;
+}
+
+.words{
+    font-size: 22px;
+    font-family: 'Amiri', serif;
+    padding: 5px;
+    margin-right: 5px;
+}
+.N{
+    color: brown; 
+}
+
+.V{
+    color: darkblue;
+}
+
+.T{
+    color: darkolivegreen;
+}

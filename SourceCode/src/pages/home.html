@@ -1,0 +1,103 @@
+<!-- page home --page 1 -->
+<template>
+<div  class="uk-container uk-margin-medium-top">
+
+    <div class="uk-child-width-expand@s uk-text-center uk-margin-medium-bottom" uk-grid>
+        <div class="">
+          <h4 class="uk-heading-line en-title"><span>Arabic Text analyzer</span></h4>
+          <h4 class="uk-heading-line ar-title"><span>المحلل الآلي للنصوص العربية</span></h4>
+        </div>
+    </div> 
+    
+    <div class="uk-flex uk-flex-wrap uk-flex-wrap-around uk-background-muted">
+
+        <div class="uk-width-expand">   <!--  textarea -->
+            
+             
+            <div class="uk-margin" style="margin-top: 21px;">
+                <!-- <label class="uk-form-label text-arabic uk-text-center" for="home-page-textarea-1" style="margin-right: 17px">Please type your text </label>  --قم بادخال نص -->
+                <div class="uk-form-controls uk-margin-small-top">
+                    <textarea dir="rtl" id="textarea-1" name="text_to_process"  class="uk-textarea textarea-1 uk-margin-small-top" rows="10" placeholder="اخل هنا ">  الانتحال يدمر حياتك المهنية. منذ فتره طويلة </textarea>
+                    
+                </div>
+            </div>
+
+            <div uk-grid>
+                <div class="uk-width-1-2">
+     
+                    <div uk-form-custom="target: > * > span:first-child" style="width: 100%;">
+
+                        <select>
+                            <option class="text-arabic" value="0">Parts-of-Speech</option>
+                            <option class="text-arabic" value="1">Tokenized Forms</option>
+                            <option class="text-arabic" value="2">Diacritized Forms</option>
+                            <option class="text-arabic" value="3">Lemmas</option>
+                            <option class="text-arabic" value="4">Base Phrases</option>
+                            <option class="text-arabic" value="4">Named Entities</option>
+                        </select>
+                        <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom text-arabic" type="button" tabindex="-1">
+                            <span></span>
+                            <span uk-icon="icon: chevron-down"></span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="uk-width-1-2">
+
+                    <button id="btn-1" class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom">Processing</button>
+
+                </div>
+            </div>
+            
+<!-- 
+            <div class="uk-margin ">
+                <span class="words N">Noun</span>
+                <span class="words V">verb</span>
+                <span class="words T">stop words</span>
+             </div> -->
+
+        </div>
+
+
+        <div class="uk-width-expand"> <!--  resulta here -->
+            
+            
+            <div uk-filter="target: .js-filter">
+
+                <ul class="uk-flex-center" uk-tab>
+                    <li class="uk-active" uk-filter-control><a  href="#">All</a></li>
+                    <li uk-filter-control="[data-color='N']"><a style="color: brown" href="#">Nouns</a></li>
+                    <li uk-filter-control="[data-color='V']"><a style="color: darkblue" href="#">Verbs</a></li>
+                    <li uk-filter-control="[data-color='T']"><a style="color: darkolivegreen" href="#">stop words</a></li>
+                    <li><a id="refresh" href="#">refresh</a></li>
+                </ul>
+
+                <script id="tempalte" type="text/x-handlebars-template"> 
+                    
+                    {{#each words}}
+                        <li data-color="{{type}}">
+                            <span class="words {{type}}">{{word}}</span>
+                        </li>
+                    {{/each}} 
+                    
+                </script>
+
+
+                    <ul id="result-Ul-1" class="js-filter uk-text-center uk-flex-center" uk-grid></ul>
+                    </ul>
+                    
+                
+
+                <div id="loading" class="uk-text-center uk-margin-large-top">
+                    
+                </div>
+                
+
+              </div>
+
+        </div>
+    </div>
+
+
+</div>
+</template>
