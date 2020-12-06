@@ -5,6 +5,7 @@ Download the Node.js pre-built installer for your platform ..
 
 After install electron ..
    - npm install electron -g
+
 For python Server:
 - pip install flask  
 
