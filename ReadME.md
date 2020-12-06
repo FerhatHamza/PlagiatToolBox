@@ -19,12 +19,13 @@ After any change to creat the .exe file you have to run :
 
 Main files:
 
-   SourceCode/package.json             # For Config Electron
-
-   SourceCode/src/index.html           # Main App Interface
-
-   SourceCode/src/*.js                 # App Functions
-
-   SourceCode/src/pages/*.html         # Secondary App Interfaces
-
-   SourceCode/src/Server_Python/*.py   # Python Server & Plagiat Methods Src
+   ### For Config Electron
+   1. SourceCode/package.json
+   ### Main App Interface
+   2. SourceCode/src/index.html 
+   ### App Functions
+   3. SourceCode/src/*.js
+   ### Secondary App Interfaces
+   4. SourceCode/src/pages/*.html
+   ### Python Server & Plagiat Methods Src
+   5. SourceCode/src/Server_Python/*.py
